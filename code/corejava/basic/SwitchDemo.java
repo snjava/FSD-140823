@@ -9,12 +9,13 @@
 */
 public class SwitchDemo {
 	public static void main(String args[]) {
-		char day = 'T'; 
+		char day = 't'; 
 		switch(day) { 
 			case 'M':
 				System.out.println("Monday");
 				break;
 			case 'T':
+			case 't':
 				System.out.println("Tuesday or Thursday");
 				break;
 			case 'W':
