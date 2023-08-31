@@ -9,7 +9,8 @@ ROW:	5
 COLUMN:	5
 */
 
-public class PatternDemo {
+public class PatternDemo 
+{
 	public static void main(String args[]) {
 		for(int r=1;r<=5;r++) {	// ROW
 			for(int c=1;c<=r;c++) {	// Column
@@ -19,3 +20,10 @@ public class PatternDemo {
 		}
 	}
 }
+
+
+
+
+
+
+
