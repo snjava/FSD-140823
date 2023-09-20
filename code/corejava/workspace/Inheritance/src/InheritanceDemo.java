@@ -15,11 +15,13 @@ public class InheritanceDemo {
 		dev.age = 22;
 		dev.languages = "Java";
 		dev.printSoftwareDev();
-		
+		//=====Polymorphic Object==============
+		Person p1 = new Employee();
+		Person p2 = new SoftwareDeveloper();
 	}
 }
 
-class Person {
+class Person extends Object {
 	String name;
 	double age;
 	public void printPerson() {
@@ -46,12 +48,3 @@ class SoftwareDeveloper extends Employee {
 		System.out.println("Programing Lang. : " + languages);
 	}
 }
-
-
-
-
-
-
-
-
-
