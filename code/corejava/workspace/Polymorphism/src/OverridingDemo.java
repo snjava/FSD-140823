@@ -8,7 +8,7 @@ public class OverridingDemo {
 	}
 }
 class Bank {
-	final void homeInterestRate() {
+	void homeInterestRate() {
 		System.out.println("Housing Interate Rate : 11.05%");
 	}
 }
