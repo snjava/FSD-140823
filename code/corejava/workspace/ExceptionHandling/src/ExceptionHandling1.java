@@ -14,6 +14,7 @@ public class ExceptionHandling1 {
 			int value = array[index];
 			int square = value * value;
 			System.out.println("Square : " + square);
+			//System.exit(0);
 		}
 		catch(ArrayIndexOutOfBoundsException e) {
 			System.out.println("Invalid Index.. Please try again...");
@@ -23,6 +24,10 @@ public class ExceptionHandling1 {
 		}
 		catch(Exception e) {
 			System.out.println("Something Went wrong");
+		} 
+		finally {
+			scan.close();
+			System.out.println("Resource Closed....");
 		}
 	}
 }
