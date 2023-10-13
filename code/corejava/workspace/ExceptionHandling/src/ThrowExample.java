@@ -14,12 +14,17 @@ public class ThrowExample {
 		int age = scan.nextInt();
 		int currentYear = 2023;
 		
-		if(!(age>0 && age<=110)) {
-			throw new RuntimeException("Invalid Age.. Cannot Process ahead...");
+		try {
+			if(!(age>0 && age<=110)) {
+				throw new AgeInvalidException(); // raise the custom exception
+			} else {
+				int birthYear = currentYear - age;
+				System.out.println("Your Bith year is : " + birthYear);
+			}
+		} catch(AgeInvalidException ex) {
+			ex.printMessage();
 		}
-		
-		int birthYear = currentYear - age;
-		System.out.println("Your Bith year is : " + birthYear);
+
 		
 		/*try {
 			if(!(age>0 && age<=110)) {
