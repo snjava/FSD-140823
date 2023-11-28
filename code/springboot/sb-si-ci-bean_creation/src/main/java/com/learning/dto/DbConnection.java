@@ -11,6 +11,13 @@ public class DbConnection {
 	private String url;
 	private String driver;
 	
+	public DbConnection(String username, String password, String url, String driver) {
+		this.username = username;
+		this.password = password;
+		this.url = url;
+		this.driver = driver;
+	}
+
 	public void printDbDetails() {
 		System.out.println("Driver : " + driver);
 		System.out.println("Url : " + url);

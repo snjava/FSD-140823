@@ -22,7 +22,7 @@ public class SbSiCiBeanCreationApplication {
 	@Bean("mysql")
 	public DbConnection getMySqlDbConn() {
 		DbConnection db = new DbConnection();
-		db.setDriver("MySql-Driver");
+		db.setDriver("MySql-Driver");			// Setter Injection (SI)
 		db.setUrl("Mysql-URL");
 		db.setUsername("MySql-Username");
 		db.setPassword("MySql-Pasword");
@@ -31,11 +31,8 @@ public class SbSiCiBeanCreationApplication {
 	
 	@Bean("oracle")
 	public DbConnection getOracleDbConn() {
-		DbConnection db = new DbConnection();
-		db.setDriver("Oracle-Driver");
-		db.setUrl("Oracle-URL");
-		db.setUsername("Oracle-Username");
-		db.setPassword("Oracle-Pasword");
+		// Constructor Injection (CI)
+		DbConnection db = new DbConnection("Oracle-Username","Oracle-Pasword","Oracle-URL", "Oracle-Driver");
 		return db;
 	} 
 
