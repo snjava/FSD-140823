@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class Person {
 	
-	@Autowired  // Object class Address class will be injected inside Person class (DI)
+	@Autowired  // Object of Address class will be injected inside Person class (DI)
 	Address address;   // HAS-A
 	
 	@Qualifier("oracle") // is use to specify the object to be injected if there are more than once object of same class
