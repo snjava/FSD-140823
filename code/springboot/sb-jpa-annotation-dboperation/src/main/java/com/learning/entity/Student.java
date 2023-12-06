@@ -14,6 +14,9 @@ import javax.persistence.Transient;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
+// SQL : SELECT stud_name from stud_details where phoneno='9988007766'
+// HQL : SELECT name FROM Student WHERE contact='9988007766'
+
 @Table(name = "stud_details")
 @Entity
 public class Student {
